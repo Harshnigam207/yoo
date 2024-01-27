@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .div1 {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            height: 82px;
+            width: 100%;
+            background-color: black;
+            z-index: 1;
+        }
+        
+        .ul1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: x-large;
+        }
+        
+        .li1 {
+            float: left;
+        }
+        
+        #li1:hover .div3 {
+            display: block;
+        }
+        
+        .a1 {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 2px;
+            padding: 26px 18px;
+            transition: 0.1s background-color ease-in-out, 0.1s color ease-in-out;
+        }
+        
+        .a7 {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 27px 18px;
+            height: 28px;
+            transition: 0.1s background-color ease-in-out, 0.1s color ease-in-out;
+        }
+        
+        .a7:hover {
+            background-color: white;
+            border-radius: 7px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        #i1 {
+            width: 26px;
+        }
+        
+        .a1:hover {
+            background-color: white;
+            border-radius: 7px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        #fnt1 {
+            position: absolute;
+            top: 23px;
+            left: 100px;
+            color: black;
+            font-size: xxx-large;
+            /*
+            -webkit-text-stroke: 10px black;
+            */
+        }
+        
+        .div2 {
+            position: fixed;
+            background-image: url(Images/topclothing1.webp);
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100%;
+            background-color: white;
+            color: white;
+            z-index: 1;
+            transition: 2s -webkit-text-stroke ease-in-out, 1s color ease-in-out;
+        }
+        
+        .div2:hover {
+            -webkit-text-stroke: 2px white;
+            color: black;
+        }
+        
+        .tx1 {
+            display: block;
+            margin: 14px 2px 14px 14px;
+            padding: 10px 40px 10px 40px;
+            border-radius: 7px;
+            background-image: url(Images/searchicon1.png);
+            background-repeat: no-repeat;
+            background-size: 28px;
+            background-position: center left;
+            font-size: x-large;
+        }
+        
+        .div3 {
+            position: fixed;
+            top: 184px;
+            display: none;
+            left: 2px;
+            height: 508px;
+            width: 10%;
+            background-color: black;
+            color: white;
+            z-index: 1;
+            border: 1px solid white;
+            outline: 3px solid black;
+        }
+        
+        .ul2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: large;
+        }
+        
+        .a2 {
+            float: left;
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 18px;
+            margin-left: 0;
+            width: 115px;
+            transition: 0.1s background-color ease-in-out, 0.1s color ease-in-out;
+        }
+        
+        .a2:hover {
+            background-color: white;
+            border-radius: 7px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        .div4 {
+            position: absolute;
+            top: 180px;
+            left: 0;
+            height: 568px;
+            width: 100%;
+        }
+        
+        .div6 {
+            position: absolute;
+            top: 700px;
+            left: 31%;
+            height: 40px;
+            width: 40%;
+        }
+        
+        .ul3 {
+            list-style-type: none;
+            margin: 0;
+            padding: 3px 13px;
+            font-size: large;
+        }
+        
+        .a3 {
+            float: left;
+            display: block;
+            text-decoration: none;
+            padding: 6px 12px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 6px;
+            margin-right: 9px;
+            transition: 0.1s background-color ease-in-out;
+        }
+        
+        .a3:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        
+        .shoes {
+            position: fixed;
+            top: 184px;
+            left: 158px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .shirts {
+            position: fixed;
+            top: 234px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .t-shirts {
+            position: fixed;
+            top: 284px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .cargo-pants {
+            position: fixed;
+            top: 334px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .jeans {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .jackets {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .sweaters {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .hoodies {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .accessory {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        .perfumes {
+            position: fixed;
+            top: 392px;
+            left: 160px;
+            height: 300px;
+            width: 500px;
+            border: 1px solid white;
+            outline: 3px solid black;
+            background-color: black;
+            display: none;
+            z-index: 1;
+        }
+        
+        #shoess:hover .shoes {
+            display: block;
+        }
+        
+        #shirtss:hover .shirts {
+            display: block;
+        }
+        
+        #t-shirtss:hover .t-shirts {
+            display: block;
+        }
+        
+        #cargo-pantss:hover .cargo-pants {
+            display: block;
+        }
+        
+        #jeanss:hover .jeans {
+            display: block;
+        }
+        
+        #jacketss:hover .jackets {
+            display: block;
+        }
+        
+        #sweaterss:hover .sweaters {
+            display: block;
+        }
+        
+        #hoodiess:hover .hoodies {
+            display: block;
+        }
+        
+        #accessoryy:hover .accessory {
+            display: block;
+        }
+        
+        #perfumess:hover .perfumes {
+            display: block;
+        }
+        
+        .part1 {
+            position: relative;
+            top: 1%;
+            left: 30%;
+            height: 90%;
+            width: 40%;
+        }
+        
+        .part2 {
+            position: relative;
+            bottom: 0;
+            left: 30%;
+            height: auto;
+            width: 40%;
+            border-radius: 7px;
+            color: white;
+            font-size: x-large;
+            font-style: italic;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        
+        .tabledivtop {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 76%;
+            width: 100%;
+        }
+        
+        .tabledivbottom {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 10%;
+            width: 100%;
+        }
+        
+        .tabledivtop1 {
+            position: absolute;
+            top: 20px;
+            left: 5.6%;
+            height: 410px;
+            width: 18%;
+            background-image: url(Images/newfrontpageimage1.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+            margin-left: 20px;
+            transition: 0.5s background-image ease-in-out;
+        }
+        
+        .tabledivtop2 {
+            position: absolute;
+            top: 20px;
+            left: 29.2%;
+            height: 410px;
+            width: 18%;
+            background-image: url(Images/newfrontpageimage2.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+            transition: 0.5s background-image ease-in-out;
+        }
+        
+        .tabledivtop3 {
+            position: absolute;
+            top: 20px;
+            left: 52.8%;
+            height: 410px;
+            width: 18%;
+            background-image: url(Images/newfrontpageimage3.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+            transition: 0.5s background-image ease-in-out;
+        }
+        
+        .tabledivtop4 {
+            position: absolute;
+            top: 20px;
+            left: 74.4%;
+            height: 410px;
+            width: 18%;
+            background-image: url(Images/newfrontpageimage4.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+            transition: 0.5s background-image ease-in-out;
+        }
+        
+        .tabledivtop1:hover {
+            background-image: url(images2/changeimg1.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+        }
+        
+        .tabledivtop2:hover {
+            background-image: url(images2/changeimg2.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+        }
+        
+        .tabledivtop3:hover {
+            background-image: url(images2/changeimg3.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+        }
+        
+        .tabledivtop4:hover {
+            background-image: url(images2/changeimg4.webp);
+            background-size: 280px;
+            background-position: center;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+        }
+        
+        .tabledivbottom1 {
+            position: absolute;
+            top: 0;
+            left: 5.6%;
+            height: 100%;
+            width: 18%;
+            margin-left: 20px;
+        }
+        
+        .tabledivbottom2 {
+            position: absolute;
+            top: 0;
+            left: 29.2%;
+            height: 100%;
+            width: 18%;
+        }
+        
+        .tabledivbottom3 {
+            position: absolute;
+            top: 0;
+            left: 52.8%;
+            height: 100%;
+            width: 18%;
+        }
+        
+        .tabledivbottom4 {
+            position: absolute;
+            top: 0;
+            left: 74.4%;
+            height: 100%;
+            width: 18%;
+        }
+        
+        .div5 {
+            position: relative;
+            top: 7px;
+            left: 20%;
+            width: 60%;
+            height: 528px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            align-items: justify;
+            transition: 0.3s left ease-in-out, 0.3s width ease-in-out, 0.3s border ease-in-out;
+            box-sizing: border-box;
+        }
+        
+        .div5:hover {
+            left: 10%;
+            width: 80%;
+            border: 8px solid black;
+        }
+        
+        .font1 {
+            text-decoration: underline;
+            font-size: xx-large;
+            font-style: italic;
+            color: white;
+        }
+        
+        .font2 {
+            top: 155px;
+            font-size: large;
+            font-style: italic;
+            color: white;
+        }
+        
+        .div9 {
+            position: relative;
+            top: 0;
+            left: 10%;
+            height: 100%;
+            width: 80%;
+            background-color: black;
+            border-radius: 7px;
+            transition: 0.2s border-radius ease-in-out;
+        }
+        
+        .div5:hover .div9 {
+            border-radius: 0;
+        }
+        
+        .div6 {
+            position: relative;
+            top: 30%;
+            width: 40%;
+            height: 60%;
+            left: 30%;
+            cursor: pointer;
+        }
+        
+        .div7 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10%;
+            height: 100%;
+            background-image: url(Images/sideeeeeee.png);
+            display: none;
+            transition: 7s display ease-in-out;
+        }
+        
+        .div8 {
+            position: absolute;
+            top: 0;
+            left: 90%;
+            width: 10%;
+            height: 100%;
+            background-image: url(Images/sideeeeeee.png);
+            display: none;
+            transition: 7s display ease-in-out;
+        }
+        
+        .div5:hover .div7 {
+            display: block;
+        }
+        
+        .div5:hover .div8 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <ul class="ul1">
+            <li class="li1" id="li1"><a class="a7"><i class="material-icons" id="i1">menu</i></a>
+                <div class="div3 ">
+                    <ul class="ul2 ">
+                        <li class="li2 " id="shoess"><a class="a2 " href="# ">Shoes</a>
+                            <div class="shoes">
+                                <div class="part1">
+                                    <img src="images2/shoes1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Shoes
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="shirtss"><a class="a2 " href="# ">Shirts</a>
+                            <div class="shirts">
+                                <div class="part1">
+                                    <img src="images2/shirt1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Shirts
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="t-shirtss"><a class="a2 " href="# ">T-shirts</a>
+                            <div class="t-shirts">
+                                <div class="part1">
+                                    <img src="images2/t-shirt1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    T-Shirts
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="cargo-pantss"><a class="a2 " href="# ">Cargo Pants</a>
+                            <div class="cargo-pants">
+                                <div class="part1">
+                                    <img src="images2/cargo-pant1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Cargo-pants
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="jeanss"><a class="a2 " href="# ">Jeans</a>
+                            <div class="jeans">
+                                <div class="part1">
+                                    <img src="images2/jeans1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Jeans
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="jacketss"><a class="a2 " href="# ">Jackets</a>
+                            <div class="jackets">
+                                <div class="part1">
+                                    <img src="images2/jackets1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Jackets
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="li2 " id="sweaterss"><a class="a2 " href="# ">Sweaters</a>
+                            <div class="sweaters">
+                                <div class="part1">
+                                    <img src="images2/sweaters1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Sweaters
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="hoodiess"><a class="a2 " href="# ">Hoodies</a>
+                            <div class="hoodies">
+                                <div class="part1">
+                                    <img src="images2/hoodis1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Hoodies
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="accessoryy"><a class="a2 " href="# ">Accessories</a>
+                            <div class="accessory">
+                                <div class="part1">
+                                    <img src="images2/accessory1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Accessory
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li2 " id="perfumess"><a class="a2 " href="# ">Perfumes</a>
+                            <div class="perfumes">
+                                <div class="part1">
+                                    <img src="images2/perfume1.webp" height="100%" width="100%" style="border-radius: 7px;">
+                                </div>
+                                <div class="part2">
+                                    Perfumes
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li1"><a class="a1 " href="home1.html ">Home</a></li>
+            <li class="li1"><a class="a1 " href="contactus.html ">Contact Us</a></li>
+            <li class="li1"><a class="a1 " href="login.html ">Login</a></li>
+            <li class="li1"><a class="a1 " href="jobb.html ">Work With Us</a></li>
+            <li class="li1"><a class="a1 " href="mens.html ">Mens</a></li>
+            <li class="li1"><a class="a1 " href="womens.html ">Womens</a></li>
+            <li class="li1" style="float: right;background-color: black;border-radius: 7px; margin-right: 2px;"><a class="a1 " href="# ">Search</a></li>
+            <li class="li1" style="float: right; "><input type="text " class="tx1 "></li>
+        </ul>
+
+    </div>
+    <div class="div2">
+        <font id="fnt1 " style="position: fixed; top: 23px; left: 100px; font-size: xxx-large;"><i><b>Stylechotic</b></i></font>
+    </div>
+    <div class="div4 ">
+        <div class="div5">
+            <div class="div7">
+
+            </div>
+            <div class="div9">
+                <div class="div6">
+                    <font class="font1">Contact Us</font><br>
+                    <font class="font2">
+                        Harsh Nigam<br> H.No:- 203,<br> Chandrika Aashay,Anika Residency,<br> Gorakhpur ,Gauri Ghat Road, Jablapur,<br> Madhyapradesh (MP)482001,<br> Mob No:- 6260202504,<br> Email:- harshnigam207@gmail.com<br>
+                    </font>
+                </div>
+            </div>
+            <div class="div8">
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
